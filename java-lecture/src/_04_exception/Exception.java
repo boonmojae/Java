@@ -84,4 +84,28 @@ public class Exception {
 
     }
 
+    /**
+     * 다양한 예외 처리 상황
+     * 1. catch 여러개 사용 가능
+     *  try { ~~~ } catch(){
+     *  } catch(Exception1 e) {
+     *  } catch(Exception2 e) {
+     *  } catch(Exception3 e) {
+     *  }
+     *  - 여러 개의 예외를 받아주는 경우, 각각의 예외마다 처리 방법이 다를 때
+     *
+     * 2. 하나의 catch 에 exception을 여러 개 작성 가능
+     *  try {
+     *  } catch(Exception1 | Exception2 e) {
+     *  }
+     * - 하나의 매개변수에 여러개의 에러를 받을 수 있음
+     * - 여러 개의 에러를 받아줄 때 예외처리가 비슷한 경우 사용
+     *
+     * 3. Exception 이라는 전체 예외 타입 명시 가능
+     *   try {
+     *   } catch(Exception e) {
+     *   }
+     * - 웬만하면 디테일한 에러 종류 명시하는게 좋음
+     */
+
 }
