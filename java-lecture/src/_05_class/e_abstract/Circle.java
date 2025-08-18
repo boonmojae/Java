@@ -10,6 +10,6 @@ public class Circle extends Shape{
     // draw 추상메소드 실제 구현
     @Override
     void draw() {
-        System.out.println("원 그리기");
+
     }
 }
