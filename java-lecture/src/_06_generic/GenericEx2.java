@@ -4,8 +4,6 @@ package _06_generic;
 // 정수형, 실수형 모두 포함
 // -Byte, Short, Integer, Long, Float, Double
 
-import _05_class._a_access_modifire.pack2.C;
-
 // generic 클래스 제한
 // T 타입은 Number 를 상속받은 클래스만 허용
 class Box<T extends Number>{
