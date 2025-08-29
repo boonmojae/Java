@@ -1,14 +1,20 @@
 package _08_dependency_injection.after;
 
-// #2
 // 게시판 목록을 관리하는 기능 제공
 public class BoardService {
-    // private final FileBoardPersistence persistence;
-    private final DbBoardPersistence persistence;
 
-    public BoardService() {
-        // this.persistence = new FileBoardPersistence();
-        this.persistence = new DbBoardPersistence();
+    // 1. 생성자를 이용한 의존성 주입
+//    private final IBoardPersistence persistence;
+//
+//    public BoardService(IBoardPersistence persistence) {
+//        this.persistence = persistence;
+//    }
+
+    // 2. setter 를 이용한 의존성 주입
+    private IBoardPersistence persistence;
+
+    public void setIBoardPersistence(IBoardPersistence persistence) {
+        this.persistence = persistence;
     }
 
     public void save() {
